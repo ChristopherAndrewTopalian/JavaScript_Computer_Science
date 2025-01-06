@@ -2,6 +2,8 @@
 
 Computer Science taught using JavaScript Bookmarklets
 
+https://github.com/ChristopherAndrewTopalian/JavaScript_Computer_Science
+
 ----
 
 Dedicated to God the Father  
