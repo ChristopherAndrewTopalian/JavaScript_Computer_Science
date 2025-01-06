@@ -1,5 +1,5 @@
 
     Dedicated
-           to
+          to
 God the Father
 
