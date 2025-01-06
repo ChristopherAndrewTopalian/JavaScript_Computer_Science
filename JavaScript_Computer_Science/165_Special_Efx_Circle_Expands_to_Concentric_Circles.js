@@ -9,7 +9,7 @@ function()
         /* number of concentric circles */
         let numCircles = 10;
 
-        /* initial size of the innermost circle */
+        /* initial size of innermost circle */
         let circleSize = 50;
 
         for (let i = 0; i < numCircles; i++)
@@ -20,57 +20,60 @@ function()
             circle.style.height = circleSize + 'px';
             circle.style.borderRadius = '50%';
             circle.style.backgroundColor = 'aqua';
-            circle.style.animation = 'expandCircle 1s ease-in-out';
 
-            /*-*/
+            /* apply transition */
+            circle.style.transition = 'transform 1s ease-in-out, opacity 1s ease-in-out';
+            circle.style.opacity = 1;
+            circle.style.transform = 'scale(1)';
 
             /* calculate position to center circles */
             let leftPosition = (window.innerWidth - circleSize) / 2;
-
             let topPosition = (window.innerHeight - circleSize) / 2;
-
-            /*-*/
 
             circle.style.left = leftPosition + 'px';
             circle.style.top = topPosition + 'px';
 
-            /*-*/
-
             /* increase the circle size for the next concentric circle */
             circleSize += 50;
 
-            circles.push(circle);
+            circles.push({
+                element: circle,
+                size: circleSize
+            });
 
             document.body.append(circle);
         }
 
+        /* set animation on circles after they are created */
         setTimeout(function()
         {
             for (let i = 0; i < circles.length; i++)
             {
-                /* remove circles after animation */
-                circles[i].remove();
+                let circleObj = circles[i];
+
+                if (circleObj && circleObj.element)
+                {
+                    let circle = circleObj.element;
+
+                    /* animate the circles by scaling them up and fading out */
+                    circle.style.opacity = 0;
+                    circle.style.transform = 'scale(1.5)';
+                }
             }
-        }, 1000);
+        }, 10); /* small delay before starting animation */
+
+        /* remove circles after the animation finishes */
+        setTimeout(function()
+        {
+            for (let i = 0; i < circles.length; i++)
+            {
+                if (circles[i] && circles[i].element)
+                {
+                    circles[i].element.remove();
+                }
+            }
+        }, 1000); /* match the animation duration */
     }
-
-    /*-*/
-
-    let style001 = document.createElement('style');
-
-    style001.innerHTML = `
-        @keyframes expandCircle {
-        0% {
-            opacity: 1;
-            transform: scale(1);
-        }
-        100% {
-            opacity: 0;
-            transform: scale(1.5);
-        }
-    }`;
-
-    document.head.append(style001);
 
     makeSpecialEfx();
 
