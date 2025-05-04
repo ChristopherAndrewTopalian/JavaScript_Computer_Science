@@ -33,7 +33,7 @@ function()
 
         ourButton.onclick = function()
         {
-            let theVideo = document.querySelectorAll("video");
+            let theVideo = document.querySelectorAll("video")[0];
 
             theVideo.pause();
         };
