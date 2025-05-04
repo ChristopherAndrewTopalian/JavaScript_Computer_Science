@@ -19,7 +19,7 @@ function()
         playButton.style.fontSize = 20 + "px";
         playButton.style.fontWeight = "bold";
         playButton.style.color = "rgb(255, 255, 255)";
-        playButton.innerHTML = "Play Button";
+        playButton.textContent = "Play Button";
 
         playButton.onmouseover = function()
         {
@@ -33,7 +33,7 @@ function()
 
         playButton.onclick = function()
         {
-            let theVideo = document.querySelectorAll("video");
+            let theVideo = document.querySelectorAll("video")[0];
 
             theVideo.play();
         };
