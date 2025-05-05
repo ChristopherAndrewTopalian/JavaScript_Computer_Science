@@ -1,5 +1,5 @@
 javascript:(
-/* input.js */
+/* input_number.js */
 function()
 {
     function makePlayerInput()
