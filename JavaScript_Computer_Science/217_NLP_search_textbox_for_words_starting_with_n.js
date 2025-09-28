@@ -10,14 +10,20 @@ function()
     container.style.backgroundColor = 'lightgray';
     document.body.append(container);
 
+    /*-*/
+
     let userInput = document.createElement('input');
     userInput.type = 'text';
     userInput.placeholder = 'Enter text to search for "n" words';
     container.append(userInput);
 
+    /*-*/
+
     let searchButton = document.createElement('button');
     searchButton.innerText = 'Search';
     container.append(searchButton);
+
+    /*-*/
 
     userInput.onkeydown = function(event)
     {
