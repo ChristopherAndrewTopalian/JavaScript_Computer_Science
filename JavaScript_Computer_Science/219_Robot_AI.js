@@ -156,7 +156,7 @@ function()
 /*Textbox for Input with Send Button - Random Responses every time to keywords and phrases and variations of keywords and phrases found. Other random response when no keywords are found - and Calculations*/
 
 /* Dedicated to God the Father */
-/* All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025 */
+/* All Rights Reserved Christopher Andrew Topalian Copyright 2000-2026 */
 /* https://github.com/ChristopherTopalian */
 /* https://github.com/ChristopherAndrewTopalian */
 /* https://sites.google.com/view/CollegeOfScripting */

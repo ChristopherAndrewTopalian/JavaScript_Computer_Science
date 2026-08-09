@@ -6,5 +6,5 @@ SCIENCE
 by
 Christopher Andrew Topalian
 All Rights Reserved
-Copyright 2000-2025
+Copyright 2000-2026
 
