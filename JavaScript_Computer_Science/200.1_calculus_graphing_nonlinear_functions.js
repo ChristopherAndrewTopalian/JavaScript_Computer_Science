@@ -42,12 +42,14 @@ function()
 
     /* draw the parabola: f(x) = 0.05 * x^2 */
     /* we use a loop to plot many small points to form a curve */
-    for (let i = -200; i <= 200; i++) {
+    for (let i = -200; i <= 200; i++)
+    {
         let currentX = i;
         let currentY = scale * Math.pow(currentX, 2);
 
         /* only plot if it fits inside our 400x400 container bounds */
-        if (currentY <= 200) {
+        if (currentY <= 200)
+        {
             let dot = document.createElement("div");
             dot.style.position = "absolute";
             dot.style.left = (200 + currentX) + "px";
@@ -62,11 +64,13 @@ function()
     /* prompt user to enter an x-coordinate */
     userX = parseFloat(prompt("Enter an x-coordinate (between -63 and 63) to plot on the curve f(x) = 0.05 * x²:"));
 
-    if (!isNaN(userX)) {
+    if (!isNaN(userX))
+    {
         /* calculate exact Y based on the function */
         calculatedY = scale * Math.pow(userX, 2);
 
-        if (calculatedY <= 200) {
+        if (calculatedY <= 200)
+        {
             /* plot user point */
             let userPoint = document.createElement("div");
             userPoint.style.position = "absolute";
@@ -88,7 +92,9 @@ function()
             pointLabel.style.color = "rgb(255, 100, 150)";
             pointLabel.textContent = "(" + userX + ", " + calculatedY.toFixed(2) + ")";
             graphContainer.append(pointLabel);
-        } else {
+        }
+        else
+        {
             alert("That point exceeds our scanner's vertical range! Try an X value closer to zero.");
         }
     }
