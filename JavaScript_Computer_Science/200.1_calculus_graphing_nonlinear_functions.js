@@ -14,7 +14,7 @@ function()
     graphContainer.style.top = "5px";
     graphContainer.style.width = "400px";
     graphContainer.style.height = "400px";
-    graphContainer.style.border = "1px solid #777";
+    graphContainer.style.border = "1px solid rgb(200, 200, 200)";
     graphContainer.style.backgroundColor = "rgb(30, 30, 30)";
     graphContainer.style.color = "white";
     graphContainer.style.fontFamily = "sans-serif";
