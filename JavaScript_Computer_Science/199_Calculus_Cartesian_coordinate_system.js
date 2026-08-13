@@ -1,5 +1,5 @@
 javascript:(
-/* Starfleet Academy: Cartesian Coordinate Plotter */
+/* Calculus_Cartesian_coordinate_system.js */
 function()
 {
     let x;
@@ -80,7 +80,7 @@ function()
     }
 }());
 
-/* Calculus - Cartesian coordinate system - plot points on a graph*/
+/* Calculus - Cartesian coordinate system - plot points on a graph */
 
 /*
 creates a graph with an origin (0, 0) at the center.
