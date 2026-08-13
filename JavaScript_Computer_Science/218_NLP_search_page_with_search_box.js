@@ -8,6 +8,7 @@ function()
     container.style.top = '10px';
     container.style.padding = '10px';
     container.style.backgroundColor = 'lightgray';
+    container.style.zIndex = 1000;
     document.body.append(container);
 
     let userInput = document.createElement('input');
